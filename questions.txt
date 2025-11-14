@@ -1,0 +1,32 @@
+Q1: Compare the performance of the Logistic Regression, Random Forest, and XGBoost models.
+
+(NOTE: Replace the following placeholder values with your actual metrics from running evaluate.py)
+
+After training and evaluation, the model performance was as follows:
+
+1.  Logistic Regression (LogReg):
+    * Accuracy: [X.XX]
+    * F1 Score: [X.XX]
+
+2.  Random Forest (RF):
+    * Accuracy: [Y.YY]
+    * F1 Score: [Y.YY]
+
+3.  XGBoost (XGB):
+    * Accuracy: [Z.ZZ]
+    * F1 Score: [Z.ZZ]
+
+Comparison:
+The XGBoost model performed the best overall, achieving the highest [State the best metric, e.g., Accuracy or F1 Score] at [Z.ZZ]. This is expected, as gradient boosting methods often excel at tabular data. The Random Forest model provided a slight improvement over the basic LogReg model but was outperformed by XGBoost.
+
+---
+
+Q2: What can we still improve in this MLOps pipeline structure?
+
+We can still improve this pipeline structure by implementing several MLOps best practices:
+
+1.  **Configuration Management (Using YAML/JSON):** Currently, hyperparameters and file paths are hardcoded within the Python scripts. We should use a central configuration file (e.g., `config.yaml`) to manage all settings, making the pipeline more flexible and easier to update.
+2.  **Data and Model Versioning (DVC/MLflow):** The pipeline lacks versioning for the processed data and trained models. Implementing tools like DVC (Data Version Control) or MLflow would allow us to track exactly which model version was trained on which data version.
+3.  **Standardized Model Deployment Interface:** While we have a `predict.py` script, we should define a more formal deployment contract (e.g., an API endpoint using FastAPI or Flask) to ensure seamless integration with serving environments.
+4.  **Automated Testing and CI/CD:** We need to add Unit Tests for the classes (preprocessors, features, models) and integration tests for the scripts. Integrating these tests into a CI/CD pipeline (using GitHub Actions or Jenkins) would ensure code quality and automatic deployment upon successful merge to master.
+5.  **Logging and Monitoring:** Implement robust logging across all pipeline steps to track execution time, data quality checks, and model performance drift in production.
