@@ -318,4 +318,25 @@ To https://github.com/ghadynehme/mlops-2025
 
 (mlops 2025) C:\Users\GHADY\Desktop\mlops 2025>run_pipeline.sh
 
+(mlops 2025) C:\Users\GHADY\Desktop\mlops 2025>questions.txt
+
+(mlops 2025) C:\Users\GHADY\Desktop\mlops 2025>git add run_pipeline.sh questions.txt
+
+(mlops 2025) C:\Users\GHADY\Desktop\mlops 2025>git commit -m "docs: Final deliverables and run_pipeline.sh script"
+[master edb5cbd] docs: Final deliverables and run_pipeline.sh script
+ 2 files changed, 353 insertions(+)
+ create mode 100644 questions.txt
+ create mode 100644 run_pipeline.sh
+
+(mlops 2025) C:\Users\GHADY\Desktop\mlops 2025>git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.89 KiB | 1.95 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ghadynehme/mlops-2025
+   2d95b14..edb5cbd  master -> master
+
 (mlops 2025) C:\Users\GHADY\Desktop\mlops 2025>
